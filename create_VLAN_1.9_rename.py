@@ -22,7 +22,7 @@ vlan_name = input('Enter a VLAN name: ')
 def vlan_check():
     global vlan_number
     global vlan_name
-    net_connect = ConnectHandler(ip='172.25.200.146', device_type='cisco_nxos', username='python', password='Ht7Wuvsj4H')
+    net_connect = ConnectHandler(ip='***', device_type='cisco_nxos', username='python', password='***')
     vl = net_connect.send_config_set(['show vlan id ' + vlan_number + ' | grep ' + vlan_number])
     print (vl + '\n')
 
@@ -30,16 +30,16 @@ def vlan_check():
         print('*******   VLAN ' + vlan_number + ' exists. Please choose another VLAN number')
         vlan_number = input('Enter a VLAN number to create: ')
         vlan_name = input('Enter a VLAN name: ')
-        net_connect = ConnectHandler(ip='172.25.200.146', device_type='cisco_nxos', username='python', password='Ht7Wuvsj4H')
+        net_connect = ConnectHandler(ip='***', device_type='cisco_nxos', username='python', password='***')
         vl = net_connect.send_config_set(['show vlan id ' + vlan_number + ' | grep ' + vlan_number])
         print (vl + '\n')
-    print('*******   Horray! Proceeding with creation VLAN ' + vlan_number)
+    print('*******    Proceeding with creation VLAN ' + vlan_number)
 
 #Checking if the VLAN exists in hh DC
 def hh_vlan_check():
     global vlan_number
     global vlan_name
-    net_connect = ConnectHandler(ip='172.23.0.5', device_type='cisco_nxos', username='python', password='Ht7Wuvsj4H')
+    net_connect = ConnectHandler(ip='***', device_type='cisco_nxos', username='python', password='***')
     vl = net_connect.send_config_set(['show vlan id ' + vlan_number + ' | grep ' + vlan_number])
     print (vl + '\n')
 
@@ -47,16 +47,16 @@ def hh_vlan_check():
         print('*******   VLAN ' + vlan_number + ' exists. Please choose another VLAN number')
         vlan_number = input('Enter a VLAN number to create: ')
         vlan_name = input('Enter a VLAN name: ')
-        net_connect = ConnectHandler(ip='172.23.0.5', device_type='cisco_nxos', username='python', password='Ht7Wuvsj4H')
+        net_connect = ConnectHandler(ip='***', device_type='cisco_nxos', username='python', password='****')
         vl = net_connect.send_config_set(['show vlan id ' + vlan_number + ' | grep ' + vlan_number])
         print (vl + '\n')
-    print('*******   Horray! Proceeding with creation VLAN ' + vlan_number)
+    print('*******    Proceeding with creation VLAN ' + vlan_number)
 
 #Checking if the VLAN exists in kk DC
 def kk_vlan_check():
     global vlan_number
     global vlan_name
-    net_connect = ConnectHandler(ip='172.28.8.4', device_type='cisco_nxos', username='python', password='Ht7Wuvsj4H')
+    net_connect = ConnectHandler(ip='***', device_type='cisco_nxos', username='python', password='****')
     vl = net_connect.send_config_set(['show vlan id ' + vlan_number + ' | grep ' + vlan_number])
     print (vl + '\n')
 
@@ -64,10 +64,10 @@ def kk_vlan_check():
         print('*******   VLAN ' + vlan_number + ' exists. Please choose another VLAN number')
         vlan_number = input('Enter a VLAN number to create: ')
         vlan_name = input('Enter a VLAN name: ')
-        net_connect = ConnectHandler(ip='172.28.8.4', device_type='cisco_nxos', username='python', password='Ht7Wuvsj4H')
+        net_connect = ConnectHandler(ip='***', device_type='cisco_nxos', username='python', password='****')
         vl = net_connect.send_config_set(['show vlan id ' + vlan_number + ' | grep ' + vlan_number])
         print (vl + '\n')
-    print('*******   Horray! Proceeding with creation VLAN ' + vlan_number)
+    print('*******    Proceeding with creation VLAN ' + vlan_number)
 
 
 
