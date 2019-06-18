@@ -1,6 +1,6 @@
 exit() when a vlan exists
 CIs in separate module
-
+get rid of global
 
 Kirill K
 HK1
